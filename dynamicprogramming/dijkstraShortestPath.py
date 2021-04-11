@@ -79,7 +79,11 @@ class Graph:
         self.printSolution(dist)
 
 
-# Driver program
+def printGraph(graph):
+    for row in graph:
+        print(row)
+
+
 graph = Graph(9)
 graph.graph = [
     [0, 5, 0, 0, 0, 0, 0, 13, 0],
@@ -93,7 +97,5 @@ graph.graph = [
     [0, 0, 2, 0, 0, 0, 6, 7, 0],
 ]
 
-for x in graph.graph:
-    print(x)
-
+printGraph(graph.graph)
 graph.dijkstra(0)
